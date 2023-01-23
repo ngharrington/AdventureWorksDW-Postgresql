@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e
 
 # Run this from the root of this repo.
