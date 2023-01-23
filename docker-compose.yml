@@ -1,0 +1,20 @@
+services:
+  tools:
+    build:
+      context: .
+      dockerfile: ./docker/tools.dockerfile
+    image: postgres-adventureworks-tools
+    volumes:
+      - ./tools:/app
+    networks:
+      - shared
+
+  sqlserver:
+    image: sqlserver-adventureworksdw
+    ports:
+      - 1433:1433
+    networks:
+      - shared
+
+networks:
+  shared:

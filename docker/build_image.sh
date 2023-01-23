@@ -10,6 +10,6 @@ set -e
 
 echo "Downloading Adventureworks2019DW Data Warehouse backup..."
 wget -O ./docker/AdventureWorksDW2019.bak -q https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak
-docker build --no-cache ./docker/ -t pyreql-test-sqlserver -f ./docker/sqlserver.dockerfile
+docker build --no-cache ./docker/ -t sqlserver-adventureworksdw -f ./docker/sqlserver.dockerfile
 rm ./docker/AdventureWorksDW2019.bak
 
